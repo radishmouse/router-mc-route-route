@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import {Route} from 'react-router-dom';
+import {Route, Link} from 'react-router-dom';
 import NavBar from './NavBar';
 
 class App extends Component {
@@ -50,6 +48,11 @@ const Cats = (props) => {
   return (
     <div>
       <h1>It's Cats!</h1>
+      <ul>
+        <li><Link to={`${props.match.url}/oakley`}>Oakley</Link></li>
+        <li><Link to={`${props.match.url}/milla`}>Milla</Link></li>
+        <li><Link to={`${props.match.url}/ryan`}>Ryan</Link></li>
+      </ul>
     </div>
   );
 }

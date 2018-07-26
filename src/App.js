@@ -19,7 +19,7 @@ class App extends Component {
           <li><Link to="/cats">Cats</Link></li>
         </ul>
 
-        <Route path="/" component={Landing} />
+        <Route path="/" exact={true} component={Landing} />
         <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/cats" component={Cats} />

@@ -9,19 +9,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-
         <NavBar />
 
         <Route path="/" exact={true} component={Landing} />
         <Route path="/home" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/cats" component={Cats} />
-
-
+        <Route path="/cats/:cat" component={SpecificCat} />
       </div>
     );
   }
@@ -52,6 +46,7 @@ const About = (props) => {
 }
 
 const Cats = (props) => {
+  console.log(props);
   return (
     <div>
       <h1>It's Cats!</h1>
@@ -59,7 +54,15 @@ const Cats = (props) => {
   );
 }
 
-
+const SpecificCat = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <h1>It's a single specific cat!</h1>
+      <h2>{props.match.params.cat}</h2>
+    </div>
+  );
+}
 
 
 export default App;

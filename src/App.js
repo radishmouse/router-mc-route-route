@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
+import NavBar from './NavBar';
 
 class App extends Component {
   render() {
@@ -12,12 +13,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <ul>
-          <li><Link to="/">Landing</Link></li>
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/cats">Cats</Link></li>
-        </ul>
+
+        <NavBar />
 
         <Route path="/" exact={true} component={Landing} />
         <Route path="/home" component={Home} />

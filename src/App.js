@@ -43,15 +43,22 @@ const About = (props) => {
   );
 }
 
+const formatAsLink = (toUrl, name) => {
+  return <li><Link to={toUrl}>{name}</Link></li>
+}
+
 const Cats = (props) => {
   console.log(props);
+  let allCats = [
+    'oakley',
+    'milla',
+    'ryan'
+  ];
   return (
     <div>
       <h1>It's Cats!</h1>
       <ul>
-        <li><Link to={`${props.match.url}/oakley`}>Oakley</Link></li>
-        <li><Link to={`${props.match.url}/milla`}>Milla</Link></li>
-        <li><Link to={`${props.match.url}/ryan`}>Ryan</Link></li>
+        {allCats.map(cat => formatAsLink(`${props.match.url}/${cat}`, cat))}
       </ul>
     </div>
   );

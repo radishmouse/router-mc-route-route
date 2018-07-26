@@ -19,6 +19,8 @@ class App extends Component {
         </ul>
 
         <Route path="/home" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/cats" component={Cats} />
 
 
       </div>

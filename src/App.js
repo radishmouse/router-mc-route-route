@@ -18,9 +18,40 @@ class App extends Component {
           <li><a href="">Cats</a></li>
         </ul>
 
+        <Route path="/home" component={Home} />
+
+
       </div>
     );
   }
 }
+
+
+const Home = (props) => {
+  return (
+    <div>
+      <h1>Welcome Home!</h1>
+    </div>
+  );
+}
+
+const About = (props) => {
+  return (
+    <div>
+      <h1>About!</h1>
+    </div>
+  );
+}
+
+const Cats = (props) => {
+  return (
+    <div>
+      <h1>It's Cats!</h1>
+    </div>
+  );
+}
+
+
+
 
 export default App;
